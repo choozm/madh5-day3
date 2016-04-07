@@ -1,0 +1,22 @@
+<ion-view title="Customer List">
+
+    <ion-nav-buttons side="right">
+        <button class="button icon ion-refresh"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <ion-list show-delete="showDelete">
+            <ion-item ng-repeat="c in customers" ng-click="show(c.customerId)">
+                <h2> {{c.name }} </h2>
+                <ion-delete-button class="icon ion-minus-circled"
+                                   ng-click="deleteCustomer($index)">
+                </ion-delete-button>
+                <ion-option-button class="icon ion-email button"
+                                   ng-click="sendEmail(c.email)">
+                </ion-option-button>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+
+</ion-view>
