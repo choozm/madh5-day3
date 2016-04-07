@@ -1,0 +1,10 @@
+<h1>Customer List</h1>
+
+<ol>
+    <li ng-repeat="c in customers">
+        <a href="#/cdetail/{{ c.customerId }}">
+            <h4> {{c.name}} </h4>
+        </a>
+        <p>email: {{c.email}}</p>
+    </li>
+</ol>
