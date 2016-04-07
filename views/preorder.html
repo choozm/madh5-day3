@@ -1,0 +1,35 @@
+<form name="preorder" novalidate ng-submit="registerMe()">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" size="30" required
+                       ng-model="name"
+                       placeholder="Your name">
+            </td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>
+                <input type="tel" size="30" required
+                       ng-model="phone"
+                       placeholder="Your contact">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="email" size="30" required
+                       ng-model="email"
+                       placeholder="Your email">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">Keep me informed!</button>
+            </td>
+        </tr>
+    </table>
+
+</form>

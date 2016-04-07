@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CustomerApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css">
+    <script src="bower_components/ionic/release/js/ionic.bundle.js"></script>
+
+    <script src="icustomer.js"></script>
+</head>
+<body ng-controller="CustomerCtrl">
+
+    <ion-header-bar class="bar-energized">
+        <h1 class="title">Customer List</h1>
+        <a class="button button-icon icon ion-trash-a"
+           ng-click="toggleDelete()"></a>
+    </ion-header-bar>
+
+    <ion-content>
+        <ion-list show-delete="showDelete">
+            <ion-item ng-repeat="c in customers" ng-click="show()">
+              <h2> {{c.name }} </h2>
+                <ion-delete-button class="icon ion-minus-circled"
+                    ng-click="deleteCustomer($index)">
+                </ion-delete-button>
+                <ion-option-button class="icon ion-email button"
+                        ng-click="sendEmail(c.email)">
+                </ion-option-button>
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>
+
+</body>
+</html>
+
+
+
+

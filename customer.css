@@ -1,0 +1,15 @@
+.myanimate.ng-animate {
+    transition-property: opacity transform;
+    transition-duration: 1000ms;
+    transition-timing-function: linear;
+}
+
+.myanimate.ng-enter, .myanimate.ng-leave.ng-leave-active {
+    transform: rotate(-360deg);
+    opacity: 0;
+}
+
+.myanimate.ng-enter.ng-enter-active, .myanimate.ng-leave {
+    transform: rotate(0deg);
+    opacity: 1.0;
+}
